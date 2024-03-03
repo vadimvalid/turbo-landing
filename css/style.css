@@ -110,6 +110,7 @@ html {
 body {
   font-family: "Montserrat-Regular";
   color: #1f2324;
+  font-size: 1rem;
 }
 
 .container {
@@ -133,4 +134,9 @@ li {
 ul {
   padding: 0;
   margin: 0;
+}
+
+.header .wrapper {
+  display: -ms-grid;
+  display: grid;
 }
