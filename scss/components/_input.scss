@@ -1,0 +1,14 @@
+input {
+  width: 100%;
+  height: torem(45);
+  padding: torem(15) torem(20);
+  border: 1px solid $lightGreyOpacity;
+  border-radius: 0;
+  background-color: transparent;
+  font-size: $xs;
+  color: $lightGrey;
+
+  &::placeholder {
+    color: $lightGrey;
+  }
+}

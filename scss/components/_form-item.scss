@@ -1,0 +1,10 @@
+.form-item {
+  display: flex;
+  flex-direction: column;
+  gap: torem(12);
+
+  label {
+    font-size: $xs;
+    color: $white;
+  }
+}
