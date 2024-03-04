@@ -1,0 +1,12 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: torem(20) clamp(torem(50), 5vw, torem(97));
+
+  .form-item {
+    &:last-child {
+      width: 100%;
+    }
+  }
+}
