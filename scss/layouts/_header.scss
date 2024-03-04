@@ -96,13 +96,34 @@
     display: flex;
     gap: clamp(torem(20), 3vw, torem(37));
 
-    img {
+    a {
       width: torem(20);
       height: torem(20);
+
+      &:last-child {
+        svg {
+          &:hover {
+            path {
+              stroke: $secondaryColor;
+            }
+          }
+        }
+      }
+    }
+
+    svg {
+      width: torem(20);
+      height: torem(20);
+
+      &:hover {
+        g {
+          fill: $secondaryColor;
+        }
+      }
     }
 
     @include sm-breakpoint {
-      img {
+      svg {
         width: torem(37);
         height: torem(37);
       }
@@ -147,11 +168,21 @@
       gap: torem(6);
       color: $grey;
       font-size: $sm;
+
+      &:hover {
+        color: $secondaryColor;
+      }
     }
 
-    img {
+    svg {
       width: torem(20);
       height: torem(20);
+
+      &:hover {
+        path {
+          stroke: $secondaryColor;
+        }
+      }
     }
 
     p {
@@ -169,7 +200,7 @@
         font-size: torem(21);
       }
 
-      img {
+      svg {
         width: torem(30);
         height: torem(30);
       }
