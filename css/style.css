@@ -985,3 +985,19 @@ input[type=checkbox]:checked + label:after {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
+
+.breadcrumbs ol {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3125rem;
+  padding: 0;
+  list-style-type: none;
+  font-family: "Montserrat-Medium";
+  font-size: 0.75rem;
+  color: #969696;
+}
+.breadcrumbs ol li:not(:last-child)::after {
+  content: "/";
+  margin-left: 0.3125rem;
+}
