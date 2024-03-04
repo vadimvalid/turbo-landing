@@ -17,22 +17,30 @@
 
   .wrapper {
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: torem(15);
+    grid-row-gap: torem(15);
     align-items: center;
+
+    @include sm-breakpoint {
+      grid-template-columns: auto 1fr auto;
+      grid-template-rows: 1fr;
+    }
   }
 
   &__nav {
+    grid-column: 1/-1;
+    grid-row: 2/-1;
+
     ul {
       display: flex;
-      flex-direction: column;
-      gap: torem(35);
+      flex-wrap: wrap;
+      gap: torem(15) torem(41);
 
       li {
         font-family: "Montserrat-Medium";
-        font-size: $lg;
+        font-size: $md;
 
         > a {
           display: inline-block;
@@ -59,58 +67,91 @@
     }
 
     @include sm-breakpoint {
+      grid-column: auto;
       display: none;
+
+      ul {
+        flex-direction: column;
+        gap: torem(35);
+      }
+
+      li {
+        font-size: $lg;
+      }
     }
   }
 
   &__contact {
+    grid-column: 4/5;
     display: flex;
-    flex-direction: column;
-    gap: torem(28);
+    gap: clamp(torem(50), 3vw, torem(75));
 
     @include sm-breakpoint {
+      grid-column: auto;
       display: none;
     }
   }
 
   &__social {
     display: flex;
-    gap: torem(38);
+    gap: clamp(torem(20), 3vw, torem(37));
 
     img {
-      width: torem(37);
-      height: torem(37);
+      width: torem(20);
+      height: torem(20);
+    }
+
+    @include sm-breakpoint {
+      img {
+        width: torem(37);
+        height: torem(37);
+      }
     }
   }
 
   &__phone {
     font-family: "Montserrat-Medium";
-    font-size: torem(20);
+    font-size: $md;
 
     > a {
       display: flex;
       align-items: center;
-      gap: torem(7);
+      gap: torem(5);
     }
 
     img {
-      width: torem(24);
-      height: torem(24);
+      width: torem(20);
+      height: torem(20);
+    }
+
+    @include sm-breakpoint {
+      font-size: torem(20);
+
+      > a {
+        gap: torem(7);
+      }
+
+      img {
+        width: torem(24);
+        height: torem(24);
+      }
     }
   }
 
   &__login {
+    grid-column: 3/4;
+
     > a {
       display: flex;
       align-items: center;
-      gap: torem(9);
+      gap: torem(6);
       color: $grey;
-      font-size: torem(21);
+      font-size: $sm;
     }
 
     img {
-      width: torem(30);
-      height: torem(30);
+      width: torem(20);
+      height: torem(20);
     }
 
     p {
@@ -120,16 +161,39 @@
     }
 
     @include sm-breakpoint {
+      grid-column: auto;
       display: none;
+
+      > a {
+        gap: torem(9);
+        font-size: torem(21);
+      }
+
+      img {
+        width: torem(30);
+        height: torem(30);
+      }
     }
   }
 
   &__address {
-    display: none;
+    grid-column: 2/3;
+    display: block;
+    font-size: $xs;
+    color: $grey;
+
+    p {
+      margin: 0;
+    }
+
+    @include sm-breakpoint {
+      grid-column: auto;
+      display: none;
+    }
   }
 
   &__burger {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: flex-end;
     gap: torem(9);
@@ -158,20 +222,25 @@
         transition: 0.5s;
       }
     }
+
+    @include sm-breakpoint {
+      display: flex;
+    }
   }
 
   &__bag {
+    grid-column: 5/6;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: torem(10);
 
     &:before {
       content: "";
       position: absolute;
       top: 50%;
       left: 50%;
+      display: none;
       width: 100%;
       height: torem(52);
       background-image: url("../images/icons/bag-bg.svg");
@@ -181,13 +250,27 @@
       transform: translate(-50%, calc(-50% - 7px));
       z-index: -1;
     }
+
+    @include sm-breakpoint {
+      grid-column: auto;
+      padding-bottom: torem(10);
+
+      &:before {
+        display: block;
+      }
+    }
   }
 
   &__logo {
+    grid-column: 1/2;
+
     img {
-      width: auto;
-      height: torem(27);
       object-fit: contain;
+
+      @include sm-breakpoint {
+        width: auto;
+        height: torem(27);
+      }
     }
   }
 
@@ -266,6 +349,8 @@
       &__contact {
         grid-row: 2/3;
         display: flex;
+        flex-direction: column;
+        gap: torem(28);
         padding: torem(55) torem(42) torem(36);
         border-bottom: 1px solid #d9d9d9;
         z-index: 1;
