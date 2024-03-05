@@ -1,0 +1,65 @@
+.main {
+  &__goods {
+    h1 {
+      margin-bottom: torem(32);
+      font-family: "Montserrat-Medium";
+      font-size: $xl;
+    }
+
+    .inner {
+      display: flex;
+      gap: torem(30);
+
+      > div {
+        flex: 1;
+      }
+
+      &__slider {
+        position: relative;
+        background: $darkWhite;
+
+        .slider-nav-dark {
+          position: absolute;
+          bottom: 0;
+          padding: torem(10);
+          z-index: 5;
+
+          .slider-container {
+            display: flex;
+          }
+
+          li {
+            width: torem(40);
+            padding: 4px;
+            border: 1px solid $lightGrey;
+          }
+        }
+
+        &__add {
+          position: absolute;
+          top: torem(10);
+          left: torem(10);
+          display: flex;
+          gap: torem(10);
+          z-index: 5;
+
+          > p {
+            margin: 0;
+            padding: torem(2) torem(7);
+            font-family: "Montserrat-Medium";
+            font-size: $xs;
+            color: $white;
+
+            &.hit {
+              background: $secondaryColor;
+            }
+
+            &.new {
+              background: #ebbf25;
+            }
+          }
+        }
+      }
+    }
+  }
+}

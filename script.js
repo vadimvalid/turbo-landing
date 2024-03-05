@@ -25,5 +25,12 @@ function toggleFilters() {
   });
 }
 
+function thumbHover(imageNumber) {
+  //Find the slider element
+  const sliderElement = document.getElementById("pgallery");
+  //Slide to he right image
+  swiffyslider.slideTo(sliderElement, imageNumber);
+}
+
 toggleMenu();
 toggleFilters();

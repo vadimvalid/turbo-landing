@@ -973,6 +973,58 @@ ul {
   }
 }
 
+.main__goods h1 {
+  margin-bottom: 2rem;
+  font-family: "Montserrat-Medium";
+  font-size: 2rem;
+}
+.main__goods .inner {
+  display: flex;
+  gap: 1.875rem;
+}
+.main__goods .inner > div {
+  flex: 1;
+}
+.main__goods .inner__slider {
+  position: relative;
+  background: #f3f3f3;
+}
+.main__goods .inner__slider .slider-nav-dark {
+  position: absolute;
+  bottom: 0;
+  padding: 0.625rem;
+  z-index: 5;
+}
+.main__goods .inner__slider .slider-nav-dark .slider-container {
+  display: flex;
+}
+.main__goods .inner__slider .slider-nav-dark li {
+  width: 2.5rem;
+  padding: 4px;
+  border: 1px solid #dbdbdb;
+}
+.main__goods .inner__slider__add {
+  position: absolute;
+  top: 0.625rem;
+  left: 0.625rem;
+  display: flex;
+  gap: 0.625rem;
+  z-index: 5;
+}
+.main__goods .inner__slider__add > p {
+  margin: 0;
+  padding: 0.125rem 0.4375rem;
+  font-family: "Montserrat-Medium";
+  font-size: 0.75rem;
+  color: #ffffff;
+}
+.main__goods .inner__slider__add > p.hit {
+  background: #1648a8;
+}
+.main__goods .inner__slider__add > p.new {
+  background: #ebbf25;
+}
+
 input {
   width: 100%;
   height: 2.8125rem;
