@@ -11,4 +11,19 @@ function toggleMenu() {
     }
   });
 }
+
+function toggleFilters() {
+  const filterBtn = document.querySelector(".main__aside__button");
+
+  filterBtn.addEventListener("click", () => {
+    const aside = document.querySelector(".main__aside");
+    if (aside.classList.contains("main__aside--active")) {
+      aside.classList.remove("main__aside--active");
+    } else {
+      aside.classList.add("main__aside--active");
+    }
+  });
+}
+
 toggleMenu();
+toggleFilters();
