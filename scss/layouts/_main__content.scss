@@ -1,0 +1,29 @@
+.main__content {
+  padding-bottom: torem(80);
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: minmax(torem(240), 25%) 1fr;
+    gap: clamp(torem(30), 5vw, torem(74));
+  }
+
+  h3 {
+    margin-bottom: torem(19);
+    font-family: "Montserrat-Medium";
+    font-size: $lg;
+  }
+
+  @include sm-breakpoint {
+    padding-bottom: torem(60);
+
+    h3 {
+      margin-bottom: torem(15);
+      font-size: $md;
+    }
+
+    .wrapper {
+      grid-template-columns: 1fr;
+      gap: torem(34);
+    }
+  }
+}

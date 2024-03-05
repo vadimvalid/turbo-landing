@@ -1,0 +1,42 @@
+.main__aside {
+  input[type="checkbox"] {
+    @include visually-hidden;
+    & + label {
+      position: relative;
+      padding-left: torem(30);
+      font-size: $sm;
+      color: $mainColor;
+      cursor: pointer;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: torem(12);
+        height: torem(12);
+        border: 1px solid $grey;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 4.5px;
+        left: 3px;
+        width: torem(7);
+        height: torem(7);
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 1em 1em $mainColor;
+        transform-origin: bottom left;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+      }
+    }
+
+    &:checked + label {
+      &:after {
+        transform: scale(1);
+      }
+    }
+  }
+}
