@@ -2,13 +2,13 @@
   &__aside {
     display: flex;
     flex-direction: column;
-    gap: torem(47);
+    gap: torem(58);
 
     &__item {
       .items {
         display: flex;
         flex-direction: column;
-        gap: torem(15);
+        gap: torem(18);
       }
     }
 

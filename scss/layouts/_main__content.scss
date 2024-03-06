@@ -3,12 +3,13 @@
 
   .wrapper {
     display: grid;
-    grid-template-columns: minmax(torem(240), 25%) 1fr;
+    grid-template-columns: minmax(torem(240), 18%) 1fr;
     gap: clamp(torem(30), 5vw, torem(74));
   }
 
   h3 {
-    margin-bottom: torem(19);
+    margin-top: 0;
+    margin-bottom: torem(27);
     font-family: "Montserrat-Medium";
     font-size: $lg;
   }

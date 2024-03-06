@@ -1,4 +1,4 @@
-button {
+.button {
   all: unset;
   display: flex;
   justify-content: center;
@@ -13,5 +13,16 @@ button {
 
   &:hover {
     background-color: $colorYellowHover;
+  }
+
+  &--secondary {
+    color: $secondaryColor;
+    background-color: transparent;
+    border: 1px solid $secondaryColor;
+
+    &:hover {
+      color: $white;
+      background-color: $secondaryColor;
+    }
   }
 }
