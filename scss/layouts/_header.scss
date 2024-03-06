@@ -322,6 +322,7 @@
     .wrapper {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr auto auto;
+      grid-row-gap: 0;
     }
 
     .header {
@@ -381,7 +382,7 @@
       &__contact {
         grid-row: 2/3;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: torem(28);
         padding: torem(55) torem(42) torem(36);
         border-bottom: 1px solid #d9d9d9;

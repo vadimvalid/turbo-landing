@@ -179,6 +179,24 @@
                 -moz-appearance: textfield;
               }
             }
+
+            @include sm-breakpoint {
+              .item {
+                order: 2;
+                p {
+                  width: max-content;
+                }
+
+                &:nth-child(2) {
+                  flex-direction: row-reverse;
+                  flex-shrink: 0;
+                }
+              }
+              &__amount {
+                order: 1;
+                flex: 1;
+              }
+            }
           }
 
           &__buttons {
@@ -191,6 +209,10 @@
             }
           }
         }
+      }
+
+      @include sm-breakpoint {
+        flex-direction: column;
       }
     }
   }
