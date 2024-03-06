@@ -308,8 +308,29 @@
 
                       <p>Выходные разъемы<span>Schuko x 3</span></p>
                     </div>
-                    <div class="item item__count"></div>
-                    <div class="item item__buttons"></div>
+                    <div class="item item__count">
+                      <div class="item">23 000 р.</div>
+                      <div class="item">
+                        <p>-20%</p>
+                        <p>23 000 р.</p>
+                      </div>
+                      <div class="item__count__amount">
+                        <button>-</button>
+                        <input
+                          type="number"
+                          name="item__count__amount"
+                          id="item__count__amount"
+                          value="1"
+                        />
+                        <button>+</button>
+                      </div>
+                    </div>
+                    <div class="item item__buttons">
+                      <button class="button">В корзину</button>
+                      <button class="button button--secondary">
+                        Быстрый заказ
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -330,7 +351,9 @@
                     placeholder="E-mail..."
                   />
                 </div>
-                <button type="submit" class="form-action">Отправить</button>
+                <button type="submit" class="form-action button">
+                  Отправить
+                </button>
                 <div class="form-item">
                   <input
                     type="checkbox"
